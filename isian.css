@@ -1,19 +1,17 @@
-.artikel-1 {
-    background-color: blueviolet;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  body {
+body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
     color: #333;
-  }
+}
 
-  nav, header {
+/* ================= NAVBAR ================= */
+nav, header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,26 +21,25 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
+}
 
-  .logo {
+.logo {
     font-weight: 800;
     font-size: 24px;
     color: #0A58CA;
-  }
+}
 
-  nav a {
-    margin-left: 20px;
+nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-  }
+}
 
-  nav a:hover {
+nav a:hover {
     color: #0A58CA;
-  }
+}
 
-  .cta-button {
+.cta-button {
     padding: 10px 20px;
     background-color: #0A58CA;
     color: white;
@@ -50,76 +47,129 @@
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-  }
+}
 
-  .hero {
+/* MENU WRAPPER */
+nav .menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+/* ================= RESPONSIVE NAVBAR ================= */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+        background: #fff;
+        padding-bottom: 10px;
+        
+    }
+
+    nav .menu a {
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    nav .menu.show {
+        display: flex;
+    }
+}
+
+/* ================= HERO ================= */
+.hero {
     padding: 60px 20px;
     text-align: center;
     background-color: #F0F7FF;
-  }
+}
 
-  .hero h1 {
+.hero h1 {
     font-size: 36px;
     color: #0A58CA;
     font-weight: 800;
-  }
+}
 
-  .hero p {
+.hero p {
     font-size: 18px;
     color: #555;
     margin: 20px 0;
-  }
+}
 
-  .hero a {
+.hero a {
     background-color: #0A58CA;
     color: #fff;
     padding: 14px 28px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-  }
+}
 
-  .services, .katalog {
+/* ================= SERVICES & KATALOG ================= */
+.services, .katalog {
     padding: 60px 20px;
     text-align: center;
-  }
+}
 
-  .services h2, .katalog h2 {
+.services h2, .katalog h2 {
     font-size: 28px;
     color: #0A58CA;
     margin-bottom: 30px;
-  }
+}
 
-  .service-list, .katalog-grid {
+.service-list, .katalog-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-  }
+}
 
-  .service, .visa-card {
+.service, .visa-card {
     background: #f9f9f9;
     padding: 20px;
     border-radius: 12px;
     width: 250px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     text-align: center;
-  }
+}
 
-  .service h3, .visa-card h3 {
+.service h3, .visa-card h3 {
     color: #0A58CA;
     margin-bottom: 10px;
-  }
+}
 
-  .visa-card img {
+.visa-card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 16px;
-  }
+}
 
-  .visa-card a {
+.visa-card a {
     display: inline-block;
     padding: 10px 20px;
     background: #0A58CA;
@@ -127,63 +177,70 @@
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-  }
+}
 
-  .biodata-container {
+/* ================= BIODATA ================= */
+.biodata-container {
     max-width: 600px;
     margin: 50px auto;
     background: #fff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+}
 
-  .biodata-container h2 {
+.biodata-container h2 {
     text-align: center;
     color: #0A58CA;
     margin-bottom: 30px;
-  }
+}
 
-  .biodata-item {
+.biodata-item {
     display: flex;
     margin-bottom: 16px;
-  }
+}
 
-  .biodata-item label {
+.biodata-item label {
     width: 150px;
     font-weight: 600;
     color: #333;
-  }
+}
 
-  .biodata-item span {
+.biodata-item span {
     color: #555;
-  }
+}
 
-  .profile-picture {
+.profile-picture {
     text-align: center;
     margin-bottom: 30px;
-  }
+}
 
-  .profile-picture img {
+.profile-picture img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 4px solid #0A58CA;
     object-fit: cover;
-  }
+}
 
-  video {
+video {
     width: 100%;
     max-width: 720px;
     margin: 20px auto;
     display: block;
     border-radius: 10px;
-  }
+}
 
-  footer {
+/* ================= FOOTER ================= */
+footer {
     background-color: #0A58CA;
     color: white;
     text-align: center;
     padding: 30px 20px;
     margin-top: 60px;
-  }
+}
+
+/* Artikel */
+.artikel-1 {
+    background-color: blueviolet;
+}
